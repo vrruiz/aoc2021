@@ -131,10 +131,6 @@ func main() {
                 for c := range boards[b][r] {
                     if boards[b][r][c] == n {
                         scores[b][r][c] = true
-                        if n == 13 {
-                            fmt.Println("·· 13 ·· ", b)
-                            print_board(boards[b], scores[b])
-                        }
                         if contains(win_boards, b) == false {
                             win := check_board(boards[b], scores[b], r, c)
                             if win == true {
